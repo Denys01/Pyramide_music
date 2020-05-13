@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap|Exo+2|Karla|Questrial|Work+Sans" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title></title>
+    <script type="text/javascript">
+    function searchFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myinput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('wrapper');
+        li = ul.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName('a')[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = 'none';
+            }
+        }
+    }
+    $(document).ready(function() {
+        $('a[href*=#]').bind("click", function(e) {
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 1000);
+            e.preventDefault();
+        });
+        return false;
+    });
+    </script>
+    <style type="text/css">
+    #q {
+        display: none;
+    }
+
+    .btn {
+        background-image: url("img/play.png");
+   
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .play {
+        background-image: url("img/pause.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .stop {
+        background-image: url("img/play.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    </style>
+</head>
+
+<body>
+<div class='preloader'>
+<img class="in" style="width: 50%;" src="preloader.gif">
+        <!-- <div class='loader'></div> -->
+    </div>
+    <div class="main">
+   
+        <div class="leftpanel"  id="mySidenav">
+        	
+            <div class="logo1"><img id="logo"  src="img/logo6.png"></div>
+            <div class="categories">
+                <!-- <p><span id="ser">Search</span></p> -->
+
+                <p><a href="Categories/popular.html"><span id="ser1"> What’s new</span></a></p>
+                <p><a href="#songs"><span id="ser2">View all</span></a></p>
+                <p><span id="ser3">About Us</span></p>
+                <p><a href="../style2.html"><span id="ser4">Main</span></a></p>
+            </div>
+        </div>
+    <div class="content">
+        	
+            <div style="margin-bottom: 10%;" class="search-bar">
+                <input class="sear" type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search">
+            </div>
+            <ul id="wrapper">
+                <div class="text">
+                    <a href="#">Categories</a>
+                </div>
+                <li id="all">
+                    <a href="#songs" class="btn-one"><h2>All</h2> </a>
+                </li>
+                <li id="popular">
+                    <a href="Categories/popular.html"><h2>Popular</h2></a>
+                </li>
+                <li id="pop">
+                    <a href="Categories/pop.html"><h2> Pop</h2></a>
+                </li>
+                <li id="rap">
+                    <a href="Categories/rap.html">
+                        <h2>Rap</h2></a>
+                </li>
+                <li id="rock">
+                    <a href="Categories/rock.html"><h2> Rock</h2></a>
+                </li>
+                <li id="relax">
+                    <a href="Categories/Chill.html"><h2> Chill</h2></a>
+                </li>
+               
+                <li id="classic">
+                    <a href="Categories/classic.html">
+                        <h2>Classic</h2></a>
+                </li>
+                <li id="dancing">
+                    <a href="Categories/dancing.html"><h2> Dancing</h2></a>
+                </li>
+
+                <li id="melodie">
+                    <a href="Categories/Melodies.html">
+                        <h2>Dubstep</h2></a>
+                </li>
+               
+            </ul>
+            <div class="song" id="songs">
+                <!-- <h1 style="color: white;font-family: 'Lato', sans-serif;">some text</h1> -->
+                <div class="every">
+                    <div class="everything">
+                        <div class="every1">#</div>
+                        <div class="every2">Track</div>
+                        <div class="every3">Artist</div>
+                        <div class="every4">L.</div>
+                    </div>
+               <div class="everything2">
+                        <div class="number">1</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/shape.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Shape of You</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">2</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/castle.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Castle On The Hill</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">3</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/Think.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Thinking Out Loud</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">4:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">4</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/strars.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">All Of The Stars</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">5</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/girl.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Galway Girl</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">2:43</div>
+                    </div> <div class="everything2">
+                        <div class="number">6</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/fire.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">I See Fire</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">3:39</div>
+                    </div> <div class="everything2">
+                        <div class="number">7</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/perfect.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Perfect</div>
+                        <div class="artist">Ed Sheeran</div>
+                        <div class="length">3:29</div>
+    </div>   <div class="everything2">
+                        <div class="number">8</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/be the one.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Be The One</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:59</div>
+                    </div> <div class="everything2">
+                        <div class="number">9</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/blow ur mind.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Blow Your Mind</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">4:01</div>
+                    </div> <div class="everything2">
+                        <div class="number">10</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/hoter then hell.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Hotter Then Hell</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:32</div>
+                    </div> <div class="everything2">
+                        <div class="number">11</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/idgaf.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">IDGAF</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">12</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/last dance.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Last Dance</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:43</div>
+                    </div> <div class="everything2">
+                        <div class="number">13</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/new love.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">New Love</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:29</div>
+                    </div> <div class="everything2">
+                        <div class="number">14</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/new rules.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">New Rules</div>
+                        <div class="artist">Dua Lipa</div>
+                        <div class="length">3:29</div>
+    </div>
+      <div class="everything2">
+                        <div class="number">15</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/adventure.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Adventure Of A Lifetime</div>
+                        <div class="artist">Coldplay</div>
+                        <div class="length">4:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">16</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/paradise.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Paradise</div>
+                        <div class="artist">Coldplay</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">17</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/hymn.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Hymn For The Weekend</div>
+                        <div class="artist">Coldplay</div>
+                        <div class="length">4:32</div>
+                    </div> <div class="everything2">
+                        <div class="number">18</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/magic.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Magic</div>
+                        <div class="artist">Coldplay</div>
+                        <div class="length">4:29</div>
+                    </div> <div class="everything2">
+                        <div class="number">19</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/sky.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Sky Full Of Stars</div>
+                        <div class="artist">Coldplay</div>
+                        <div class="length">4:43</div>
+                    </div>
+                       <div class="everything2">
+                        <div class="number">20</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/finesse.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Finesse</div>
+                        <div class="artist">Bruno Mars</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">21</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/that.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">That What I Like</div>
+                        <div class="artist">Bruno Mars</div>
+                        <div class="length">3:20</div>
+                    </div> <div class="everything2">
+                        <div class="number">22</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/24k.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">24K Magic</div>
+                        <div class="artist">Bruno Mars</div>
+                        <div class="length">3:32</div>
+                    </div> <div class="everything2">
+                        <div class="number">23</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/uptown.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Uptown Funk</div>
+                        <div class="artist">Bruno Mars</div>
+                        <div class="length">4:39</div>
+                    </div> <div class="everything2">
+                        <div class="number">24</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/just.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Just The Way You Are</div>
+                        <div class="artist">Bruno Mars</div>
+                        <div class="length">3:43</div>
+                    </div>
+                        <div class="everything2">
+                        <div class="number">25</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/cry.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Cry Me A River</div>
+                        <div class="artist">Justin Timberlake</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">26</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/sorry.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">I'm Sorry</div>
+                        <div class="artist">Justin Timberlake</div>
+                        <div class="length">3:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">27</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/sexy.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Sexy Ladies</div>
+                        <div class="artist">Justin Timberlake</div>
+                        <div class="length">3:22</div>
+                    </div> <div class="everything2">
+                        <div class="number">28</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/supplies.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Supplies</div>
+                        <div class="artist">Justin Timberlake</div>
+                        <div class="length">3:29</div>
+                    </div> <div class="everything2">
+                        <div class="number">29</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/mirrors.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Mirrors</div>
+                        <div class="artist">Justin Timberlake</div>
+                        <div class="length">3:43</div>
+                    </div>
+                    <div class="everything2">
+                        <div class="number">30</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/seeu.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">See You Again</div>
+                        <div class="artist">Charlie Puth</div>
+                        <div class="length">3:59</div>
+                    </div> <div class="everything2">
+                        <div class="number">31</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/attention.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Attention</div>
+                        <div class="artist">Charlie Puth</div>
+                        <div class="length">3:41</div>
+                    </div> <div class="everything2">
+                        <div class="number">32</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/talk.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">We Dont Talk Anymore</div>
+                        <div class="artist">Charlie Puth</div>
+                        <div class="length">3:32</div>
+                    </div> <div class="everything2">
+                        <div class="number">33</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/losing.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Losing My Mind</div>
+                        <div class="artist">Charlie Puth</div>
+                        <div class="length">3:39</div>
+                    </div> <div class="everything2">
+                        <div class="number">34</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/does.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Does It Feel</div>
+                        <div class="artist">Charlie Puth</div>
+                        <div class="length">3:33</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">35</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/gods.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">God's Plan</div>
+                        <div class="artist">Drake</div>
+                        <div class="length">4:29</div>
+                    </div> <div class="everything2">
+                        <div class="number">36</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/friends.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Friends</div>
+                        <div class="artist">Anne Marie</div>
+                        <div class="length">3:31</div>
+                    </div> <div class="everything2">
+                        <div class="number">37</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/rockstar.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Rockstar</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">3:32</div>
+                    </div> <div class="everything2">
+                        <div class="number">38</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/allthe.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">All The Stars</div>
+                        <div class="artist">Kendrick Lamar</div>
+                        <div class="length">4:39</div>
+                    </div> <div class="everything2">
+                        <div class="number">39</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/pray for.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Pray For Me</div>
+                        <div class="artist">Kendrick Lamar</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">40</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/congrats.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Congratulation</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">41</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/psycho.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Psycho</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">42</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/young.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Too Young</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">43</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/rich.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Rich&Sad</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">44</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/rockstar.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Rockstar</div>
+                        <div class="artist">Post Malone</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">45</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/rap.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Rap God</div>
+                        <div class="artist">Eminem</div>
+                        <div class="length">6:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">46</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/river.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">River</div>
+                        <div class="artist">Eminem</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">47</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/not.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Not Afraid</div>
+                        <div class="artist">Eminem</div>
+                        <div class="length">4:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">48</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/framed.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Framed</div>
+                        <div class="artist">Eminem</div>
+                        <div class="length">4:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">49</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/lose.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Lose Yourself</div>
+                        <div class="artist">Eminem</div>
+                        <div class="length">4:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">50</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/btw.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">By The Way</div>
+                        <div class="artist">RHCP</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">51</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/californication.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Californication</div>
+                        <div class="artist">RHCP</div>
+                        <div class="length">5:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">52</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/cant stop.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Cant Stop</div>
+                        <div class="artist">RHCP</div>
+                        <div class="length">4:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">53</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/otherside.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Otherside</div>
+                        <div class="artist">RHCP</div>
+                        <div class="length">4:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">54</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/dani.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Dani California</div>
+                        <div class="artist">RHCP</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">55</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/rape.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Rape Me</div>
+                        <div class="artist">Nirvana</div>
+                        <div class="length">4:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">56</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/come.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Come As You Are</div>
+                        <div class="artist">Nirvana</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">57</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/lithium.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Lithium</div>
+                        <div class="artist">Nirvana</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">58</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/polly.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Polly</div>
+                        <div class="artist">Nirvana</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">59</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/smells.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Smells Like A Teen Spirit</div>
+                        <div class="artist">Nirvana</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">60</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/adams.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Adam's Song</div>
+                        <div class="artist">Blink-182</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">61</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/small.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">All The Small Things</div>
+                        <div class="artist">Blink-182</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">62</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/first.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">First Date</div>
+                        <div class="artist">Blink-182</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">63</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/i miss.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">I miss You</div>
+                        <div class="artist">Blink-182</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">64</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/whats.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">What's My Age Again</div>
+                        <div class="artist">Blink-182</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">65</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/faint.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Faint</div>
+                        <div class="artist">Linkin Park</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">66</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/inside.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">From The Inside</div>
+                        <div class="artist">Linkin Park</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">67</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/end.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">In The End</div>
+                        <div class="artist">Linkin Park</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">68</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/numb.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Numb</div>
+                        <div class="artist">Linkin Park</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">69</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/done.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">What I've Done</div>
+                        <div class="artist">Linkin Park</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">70</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/505.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">505</div>
+                        <div class="artist">Arctic Monkeys</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">71</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/wanna.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Do I Wanna Know</div>
+                        <div class="artist">Arctic Monkeys</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">72</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/be yours.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">I Wanna Be Yours</div>
+                        <div class="artist">Arctic Monkeys</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">73</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/old yellow.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Old Yellow Bricks</div>
+                        <div class="artist">Arctic Monkeys</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">74</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/why d.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Why'd You Only Call Me </div>
+                        <div class="artist">Arctic Monkeys</div>
+                        <div class="length">3:43</div>
+                    </div>
+                         <div class="everything2">
+                        <div class="number">75</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/21.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">21 Guns</div>
+                        <div class="artist">Green Day</div>
+                        <div class="length">3:49</div>
+                    </div> <div class="everything2">
+                        <div class="number">76</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/idiot.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">American Idiot</div>
+                        <div class="artist">Green Day</div>
+                        <div class="length">4:21</div>
+                    </div> <div class="everything2">
+                        <div class="number">77</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/boulevard.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Boulevard Of Broken Dreams</div>
+                        <div class="artist">Green Day</div>
+                        <div class="length">3:12</div>
+                    </div> <div class="everything2">
+                        <div class="number">78</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/holiday.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Holiday</div>
+                        <div class="artist">Green Day</div>
+                        <div class="length">3:19</div>
+                    </div> <div class="everything2">
+                        <div class="number">79</div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                        <div class="btn">
+                            <audio id='q' controls class="audio">
+                                <source src="categories/audio/wake.mp3 " type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="back"> <img src="pause.png"></div>
+                    </div>
+                    </div>
+                </div>
+                        <div class="names">Wake Me Up When September Ends</div>
+                        <div class="artist">Green Day</div>
+                        <div class="length">3:43</div>
+                    </div>
+
+                    </div>
+    </div>
+        </div>
+        </div>
+
+        <script type="text/javascript">
+        $('.btn').click(function() {
+            index = $('.btn').index(this);
+            console.log(index)
+            if ($(this).hasClass('play')) {
+
+                $('.play').removeClass('play');
+                $(this).addClass('stop');
+                $(this).find("audio")[0].pause();
+                $(this).find("audio")[0].currentTime = 0;
+            } else {
+                $('.stop').removeClass('stop');
+                if ($('.play').length !=0){
+                    $('.play').find("audio")[0].pause();
+                 $('.play').find("audio")[0].currentTime = 0;
+             }
+                $('.play').removeClass('play');
+                $(this).addClass('play');
+                $(this).find("audio")[0].play();
+
+            }
+
+
+
+
+        });
+        
+        $('.flip-container').click(function() {
+   
+     if ($(this).find(".flipper").hasClass("flip"))
+         $(this).find(".flipper").removeClass("flip");
+     else
+         $(this).find(".flipper").addClass("flip");
+
+ })
+
+var index=null;
+
+// $('audio').on("ended", function() { console.log("end") }, true);
+var songs = document.getElementsByTagName('audio')
+
+for (var i=0;i < songs.length;i++)
+    songs[i].addEventListener("ended",function() { 
+        console.log("end")
+        $('.btn').get(index+1).click();
+    }, true)
+
+
+        function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+        </script>
+
+
+    <div class='container start'>
+        <span id='left-text'></span>
+        <span id='right-text'></span>
+    </div>
+    <div class='container content'>
+    </div>
+<script src='js/source.js'></script>
+</body>
+
+</html>
